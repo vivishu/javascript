@@ -8,7 +8,10 @@ app.set('views','./views')
 app.set('view engine','ejs');
 app.get('/',function(req,res){
     res.render('quatre');
-    
+    let second = fs.readFileSync('third.json')
+    let third = JSON.parse(second)
+    console.log(third)
+     
     
 });
 app.listen(3000,()=>{ 
